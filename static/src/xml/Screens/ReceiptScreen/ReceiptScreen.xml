@@ -19,7 +19,7 @@
         <xpath expr="//form[hasclass('send-email')]/div[hasclass('input-email')]" position="replace">
 
             <div class="input-email input-color">
-                <input type="email" placeholder="Email Receipt" t-model="orderUiState.inputEmail"  class=" input-color" />
+                <input t-ref="inputRef"  type="email" placeholder="Email Receipt" t-model="orderUiState.inputEmail"  class=" input-color" />
                 <button class="send" t-att-class="{ highlight: is_email(orderUiState.inputEmail) }" type="submit">Send</button>
             </div>
  

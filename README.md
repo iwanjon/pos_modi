@@ -20,7 +20,7 @@ this module create for odoo 14 with python 3.9
 3. inherit module POS, automaticaly send email if user already registered and has email. Show email notification.
 -> receiptscreen menu
 
-4. inheritlah widget char in form view, onfocus, set background-color: yellow. on form open / loaded, focus to text input.
+4. inherit widget char in form view, onfocus, set background-color: yellow. on form open / loaded, focus to text input.
 -> receiptscreen menu (input email)
 
 add this module to custome addons directory and register the addons path to config(example config is provided).
