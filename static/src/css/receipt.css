@@ -1,3 +1,7 @@
 .input-color:focus {
     background-color: yellow;
 }
+
+button.hidden-button {
+    display: None;
+}

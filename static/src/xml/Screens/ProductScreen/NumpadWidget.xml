@@ -49,7 +49,7 @@
 
     <t t-name="NumpadWidget" t-inherit="point_of_sale.NumpadWidget" t-inherit-mode="extension" owl="1">
         <xpath expr="//button[hasclass('mode-button') and text()='Disc']" position="replace">
-            <button class="mode-button" disabled="disabled">Disc</button>
+            <button class="mode-button hidden-button" disabled="disabled">Disc</button>
             <!-- <button class="mode-button" t-att-class="{
                         'selected-mode': props.activeMode === 'discount',
                         'disabled-mode': !hasManualDiscount
@@ -58,7 +58,7 @@
                     t-on-click="changeMode('discount')">Disc</button> -->
         </xpath>
         <xpath expr="//button[hasclass('mode-button')   and text()='Price']" position="replace">
-            <button class="mode-button" disabled="true">Price</button>
+            <button class="mode-button hidden-button" disabled="true">Price</button>
             <!-- <button class="mode-button" t-att-class="{
                     'selected-mode': props.activeMode === 'price',
                     'disabled-mode': !hasPriceControlRights
