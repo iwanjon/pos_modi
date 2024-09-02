@@ -27,9 +27,6 @@ add this module to custome addons directory and register the addons path to conf
 
 run command example(inside odoo main directory and odoo.conf outside of the odoo main directory)
 ``` 
-    # for running application
-    python odoo-bin -c ../odoo.conf -u pos_modi  
-    
     # for running application and import demo data
     python odoo-bin -c ../odoo.conf -u pos_modi  -i base
 
