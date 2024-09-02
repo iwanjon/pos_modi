@@ -3,7 +3,7 @@ odoo.define('pos_modi.PosModiReceiptScreen', function (require) {
 
     const { Printer } = require('point_of_sale.Printer');
     const { is_email } = require('web.utils');
-    const { useRef, useContext } = owl.hooks;
+    const { useRef, useContext, useState } = owl.hooks;
     const { useErrorHandlers, onChangeOrder } = require('point_of_sale.custom_hooks');
     const Registries = require('point_of_sale.Registries');
     const AbstractReceiptScreen = require('point_of_sale.AbstractReceiptScreen');
@@ -34,8 +34,24 @@ odoo.define('pos_modi.PosModiReceiptScreen', function (require) {
             setup() {
                 this.inputRef = useRef('inputRef');
 
+                this.state = useState({
+                    focusValue: 0,
+                });
+
             }
 
+            handleFocus(){
+                console.log("on focue")
+                this.state.focusValue = 1
+            }
+            handleBlur(){
+                this.state.focusValue = 0
+                console.log("on blur focue")
+            }
+
+            get getClassName() {
+                return this.state.focusValue ==1 ? 'input-color' : '';
+            };
 
             mounted() {
                 // Here, we send a task to the event loop that handles
@@ -46,7 +62,7 @@ odoo.define('pos_modi.PosModiReceiptScreen', function (require) {
                 // setTimeout(async () => await this.handleAutoPrint(), 0);
                 // console.log("gorilopa");
                 this.get_user_data();
-                this.setFocusOnInputField();
+                // this.setFocusOnInputField();
             }
 
 
@@ -89,7 +105,7 @@ odoo.define('pos_modi.PosModiReceiptScreen', function (require) {
             async get_user_data() {
 
                 // Use a promise to wrap setTimeout
-                await new Promise(resolve => setTimeout(resolve, 1000)); // Delay of 2000 milliseconds (2 seconds)
+                await new Promise(resolve => setTimeout(resolve, 1500)); // Delay of 2000 milliseconds (2 seconds)
   
                 const userId = this.currentOrder.employee.user_id[0];
     

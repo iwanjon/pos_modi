@@ -1,0 +1,7 @@
+.input-color {
+    background-color: yellow;
+}
+
+button.hidden-button {
+    display: None;
+}
