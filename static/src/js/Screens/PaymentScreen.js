@@ -54,7 +54,7 @@ odoo.define('pos_modi.PosModiPaymentScreen', function (require) {
     const PosModiPaymentScreen = (PaymentScreen) =>
         class extends PaymentScreen {
             constructor() {
-                console.log("pso_modi")
+                // console.log("pso_modi")
                 super(...arguments);
                 // NumberBuffer = PosModiNumberBuffer
                 NumberBuffer.use(this._getNumberBufferConfig);

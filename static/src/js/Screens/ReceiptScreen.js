@@ -44,7 +44,7 @@ odoo.define('pos_modi.PosModiReceiptScreen', function (require) {
                 // displayed regardless of what happen to the handleAutoPrint
                 // call.
                 // setTimeout(async () => await this.handleAutoPrint(), 0);
-                console.log("gorilopa");
+                // console.log("gorilopa");
                 this.get_user_data();
                 this.setFocusOnInputField();
             }
@@ -75,8 +75,8 @@ odoo.define('pos_modi.PosModiReceiptScreen', function (require) {
 
                     // const inputField = document.querySelector('input');
 
-                    console.log(this.inputRef, "ref" )
-                    console.log(this.inputRef.el, "ref.el" )
+                    // console.log(this.inputRef, "ref" )
+                    // console.log(this.inputRef.el, "ref.el" )
                     // console.log(inputField, "inputField" )
 
                     this.inputRef.el.focus()

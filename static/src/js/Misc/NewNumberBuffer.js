@@ -73,20 +73,20 @@ odoo.define('pos_modi.NewNumberBuffer', function(require) {
     class NewNumberBuffer extends EventBus {
         constructor() {
             super();
-            console.log("kingkong")
+            // console.log("kingkong")
             this.isReset = false;
             this.state={};
             this.bufferHolderStack = [];
         }
 
         _onInput(keyAccessor) {
-            console.log("goru")
+            // console.log("goru")
             return () => {
                 if (this.eventsBuffer.length <= 2) {
                     // Check first the buffer if its contents are all valid
                     // number input.
                     // const new_key= new Set(['+10000','+20000','+50000'])
-                    console.log(ALLOWED_KEYS, "ALLOWED_KEYS")
+                    // console.log(ALLOWED_KEYS, "ALLOWED_KEYS")
 
                     // ALLOWED_KEYS = new Set([...ALLOWED_KEYS, ...new_key]);
                     let newkeyvent = null
@@ -94,7 +94,7 @@ odoo.define('pos_modi.NewNumberBuffer', function(require) {
 
                         let keyevent = keyAccessor(event);
                         newkeyvent = keyevent.replace(/[.]/g, '');
-                        console.log(newkeyvent);
+                        // console.log(newkeyvent);
 
                         if (!ALLOWED_KEYS.has(newkeyvent)) {
                             this.eventsBuffer = [];
