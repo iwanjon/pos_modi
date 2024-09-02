@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="pos_modi.ReceiptScreen" xml:space="preserve">
+
+    <t t-name="ReceiptScreen" t-inherit="point_of_sale.ReceiptScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('actions')]/h1" position="replace">
+
+            <t t-if="orderUiState.emailSuccessful !== null">
+                <h1>Receipt already sent to email <t t-esc="get_username"/>. Would you like to receive your receipt again?</h1>
+            </t>
+            <t t-else="">
+                <h1>How would you like to receive your receipt?</h1>
+            </t>
+
+            <!-- <button class="mode-button" disabled="disabled">Disc</button> -->
+ 
+        </xpath>
+
+        <xpath expr="//form[hasclass('send-email')]/div[hasclass('input-email')]" position="replace">
+
+            <div class="input-email input-color">
+                <input type="email" placeholder="Email Receipt" t-model="orderUiState.inputEmail"  class=" input-color" />
+                <button class="send" t-att-class="{ highlight: is_email(orderUiState.inputEmail) }" type="submit">Send</button>
+            </div>
+ 
+        </xpath>
+
+
+    </t>
+
+</templates>

@@ -1,0 +1,36 @@
+<!-- <?xml version=".0" encoding="UTF-8"?> -->
+
+<templates id="pos_modi.PaymentScreenNumpad" xml:space="preserve">
+
+    <t t-name="PaymentScreenNumpad" t-inherit="point_of_sale.PaymentScreenNumpad" t-inherit-mode="extension" owl="1">
+        <!-- <xpath expr='//div[hasclass("numpad")]/PSNumpadInputButton' position="replace"> -->
+        <xpath expr='//div[hasclass("numpad")]/PSNumpadInputButton[position()=4]' position="replace">
+        
+                <PSNumpadInputButton value="'+10.000'" changeClassTo="'mode-button'" />
+           
+                <!-- <PSNumpadInputButton value="'+20.000'" changeClassTo="'mode-button'" />
+        
+                <PSNumpadInputButton value="'+50.000'" changeClassTo="'mode-button'" /> -->
+        
+        </xpath>
+        <xpath expr='//div[hasclass("numpad")]/PSNumpadInputButton[position()=8]' position="replace">
+        
+                <!-- <PSNumpadInputButton value="'+10.000'" changeClassTo="'mode-button'" /> -->
+           
+                <PSNumpadInputButton value="'+20.000'" changeClassTo="'mode-button'" />
+        
+                <!-- <PSNumpadInputButton value="'+50.000'" changeClassTo="'mode-button'" /> -->
+        
+        </xpath>
+        <xpath expr='//div[hasclass("numpad")]/PSNumpadInputButton[position()=12]' position="replace">
+        
+                <!-- <PSNumpadInputButton value="'+10.000'" changeClassTo="'mode-button'" />
+           
+                <PSNumpadInputButton value="'+20.000'" changeClassTo="'mode-button'" /> -->
+        
+                <PSNumpadInputButton value="'+50.000'" changeClassTo="'mode-button'" />
+        
+        </xpath>
+    </t>
+
+</templates>

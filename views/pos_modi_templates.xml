@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="assets" inherit_id="point_of_sale.assets">
+        <xpath expr="." position="inside">
+
+            <link rel="stylesheet" href="/pos_modi/static/src/css/receipt.css"/>
+            <script type="text/javascript" src="/pos_modi/static/src/js/Misc/NewNumberBuffer.js"></script>
+            <script type="text/javascript" src="/pos_modi/static/src/js/Screens/PaymentScreen.js"></script>
+            <script type="text/javascript" src="/pos_modi/static/src/js/Screens/ReceiptScreen.js"></script>
+            
+        </xpath>
+
+
+    </template>
+
+   
+
+</odoo>
