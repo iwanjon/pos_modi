@@ -38,7 +38,7 @@
     'demo': [
         'demo/demo.xml',
     ],
-    'depends': ['point_of_sale'],
+    'depends': ['base','point_of_sale'],
 
     # always loaded
 
