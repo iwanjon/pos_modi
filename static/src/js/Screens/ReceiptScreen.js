@@ -113,6 +113,16 @@ odoo.define('pos_modi.PosModiReceiptScreen', function (require) {
                     // Update component state with user data
                     // this.state.user = user[0]; // user is returned as an array
                     console.log(user, "user res");
+
+                    if (user.length == 0){
+                        console.log("no user found")
+                        return 
+                    }
+
+                    if (!user[0].email){
+                        console.log("user has no email", user)
+                        return 
+                    }
                     this.user_email = user[0].email;
                     const printer = new Printer(null, this.env.pos);
                     const receiptString = this.orderReceipt.comp.el.outerHTML;
